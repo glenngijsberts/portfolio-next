@@ -18,6 +18,21 @@ export const metadata: Metadata = {
     'Glenn Gijsberts',
   ],
   authors: [{ name: 'Glenn Gijsberts', url: 'https://glenngijsberts.vercel.app' }],
+  openGraph: {
+    title: 'Glenn Gijsberts - Portfolio',
+    description: 'Portfolio of Glenn Gijsberts, front-end developer at TicketSwap',
+    url: 'https://glenngijsberts.vercel.app',
+    siteName: 'Glenn Gijsberts - Portfolio',
+    images: [
+      {
+        url: '/images/glenngijsberts.webp',
+        width: 800,
+        height: 600,
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
 }
 
 interface Props {
