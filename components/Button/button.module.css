@@ -1,0 +1,17 @@
+.button {
+  margin-top: var(--16);
+  color: var(--brand);
+  background-color: transparent;
+  border: 1px solid var(--brand);
+  border-radius: 4px;
+  padding: var(--16) var(--24);
+  font-size: var(--16);
+  text-decoration: none;
+  cursor: pointer;
+  width: fit-content;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.button:hover {
+  background-color: color-mix(in srgb, var(--brand) 10%, white);
+}

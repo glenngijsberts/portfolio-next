@@ -1,6 +1,8 @@
 import { Header } from '~/components/Header'
 import styles from './page.module.css'
 import { Section } from '~/components/Section'
+import { Button } from '~/components/Button'
+import Link from 'next/link'
 
 const links = [
   {
@@ -37,6 +39,10 @@ const Home = () => {
           <a href="https://www.ticketswap.com">TicketSwap</a> and helping out as homework support
           volunteer at <a href="https://www.hackyourfuture.net/">HackYourFuture</a>.
         </p>
+
+        <Link href="/about-me">
+          <Button>Learn more about me</Button>
+        </Link>
 
         <ul className={styles.links}>
           {links.map(link => (
