@@ -3,6 +3,8 @@ import styles from './page.module.css'
 import { Section } from '~/components/Section'
 import { Button } from '~/components/Button'
 import Link from 'next/link'
+import { getClient } from '~/lib/apolloClient'
+import { WebsiteEntryQueryDocument } from '~/graphql/getWebsiteInfo'
 
 const links = [
   {
@@ -23,12 +25,19 @@ const links = [
   },
 ]
 
-const Home = () => {
+const Home = async () => {
+  const { data } = await getClient().query({
+    query: WebsiteEntryQueryDocument,
+    variables: {
+      id: process.env.CF_WEBSITE_ID as string,
+    },
+  })
+
   return (
     <main className={styles.pageLayout}>
       <Header />
 
-      <Section title="Glenn Gijsberts">
+      <Section title={data?.website?.title || 'Glenn Gijsberts'}>
         <p>
           Graduated as{' '}
           <a href="https://www.thuas.com/programmes/bachelors/user-experience-design">
