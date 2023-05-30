@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "format": "yarn prettier --write",
+    "format": "yarn prettier --write .",
     "test": "jest --watch",
     "lint:eslint": "next lint",
     "lint:types": "tsc --noEmit",
