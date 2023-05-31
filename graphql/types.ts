@@ -15,6 +15,7 @@ export type Scalars = {
   DateTime: { input: any; output: any; }
   Dimension: { input: any; output: any; }
   HexColor: { input: any; output: any; }
+  JSON: { input: any; output: any; }
   Quality: { input: any; output: any; }
 };
 
@@ -458,9 +459,16 @@ export type SysFilter = {
 export type Website = Entry & {
   __typename?: 'Website';
   contentfulMetadata: ContentfulMetadata;
+  description?: Maybe<WebsiteDescription>;
   linkedFrom?: Maybe<WebsiteLinkingCollections>;
   sys: Sys;
   title?: Maybe<Scalars['String']['output']>;
+};
+
+
+/** Website configuration [See type definition](https://app.contentful.com/spaces/e5j2vu5o9e01/content_types/website) */
+export type WebsiteDescriptionArgs = {
+  locale?: InputMaybe<Scalars['String']['input']>;
 };
 
 
@@ -483,10 +491,38 @@ export type WebsiteCollection = {
   total: Scalars['Int']['output'];
 };
 
+export type WebsiteDescription = {
+  __typename?: 'WebsiteDescription';
+  json: Scalars['JSON']['output'];
+  links: WebsiteDescriptionLinks;
+};
+
+export type WebsiteDescriptionAssets = {
+  __typename?: 'WebsiteDescriptionAssets';
+  block: Array<Maybe<Asset>>;
+  hyperlink: Array<Maybe<Asset>>;
+};
+
+export type WebsiteDescriptionEntries = {
+  __typename?: 'WebsiteDescriptionEntries';
+  block: Array<Maybe<Entry>>;
+  hyperlink: Array<Maybe<Entry>>;
+  inline: Array<Maybe<Entry>>;
+};
+
+export type WebsiteDescriptionLinks = {
+  __typename?: 'WebsiteDescriptionLinks';
+  assets: WebsiteDescriptionAssets;
+  entries: WebsiteDescriptionEntries;
+};
+
 export type WebsiteFilter = {
   AND?: InputMaybe<Array<InputMaybe<WebsiteFilter>>>;
   OR?: InputMaybe<Array<InputMaybe<WebsiteFilter>>>;
   contentfulMetadata?: InputMaybe<ContentfulMetadataFilter>;
+  description_contains?: InputMaybe<Scalars['String']['input']>;
+  description_exists?: InputMaybe<Scalars['Boolean']['input']>;
+  description_not_contains?: InputMaybe<Scalars['String']['input']>;
   sys?: InputMaybe<SysFilter>;
   title?: InputMaybe<Scalars['String']['input']>;
   title_contains?: InputMaybe<Scalars['String']['input']>;

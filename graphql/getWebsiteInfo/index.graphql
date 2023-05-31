@@ -4,5 +4,8 @@ query websiteEntryQuery($id: String!) {
       id
     }
     title
+    description {
+      json
+    }
   }
 }

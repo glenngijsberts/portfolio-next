@@ -5,6 +5,7 @@ import { Button } from '~/components/Button'
 import Link from 'next/link'
 import { getClient } from '~/lib/apolloClient'
 import { WebsiteEntryQueryDocument } from '~/graphql/getWebsiteInfo'
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 const links = [
   {
@@ -38,16 +39,7 @@ const Home = async () => {
       <Header />
 
       <Section title={data?.website?.title || 'Glenn Gijsberts'}>
-        <p>
-          Graduated as{' '}
-          <a href="https://www.thuas.com/programmes/bachelors/user-experience-design">
-            interaction designer
-          </a>
-          , now working as front-end developer on modern and user-friendly websites and apps.
-          Currently I&apos;m working in the growth team of{' '}
-          <a href="https://www.ticketswap.com">TicketSwap</a> and helping out as homework support
-          volunteer at <a href="https://www.hackyourfuture.net/">HackYourFuture</a>.
-        </p>
+        {data?.website?.description && documentToReactComponents(data?.website?.description.json)}
 
         <Link href="/about-me">
           <Button>Learn more about me</Button>
