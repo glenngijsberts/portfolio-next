@@ -3,11 +3,9 @@ import { Section } from '.'
 
 describe('Section', () => {
   it('renders without crashing', () => {
-    render(<Section title="Test">Test</Section>)
+    render(<Section>Test</Section>)
 
-    const title = screen.getByRole('heading', {
-      name: /Test/i,
-    })
+    const title = screen.getByText(/Test/i)
 
     expect(title).toBeInTheDocument()
   })

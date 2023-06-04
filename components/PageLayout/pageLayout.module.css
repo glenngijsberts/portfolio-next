@@ -1,0 +1,10 @@
+.pageLayout {
+  padding-block: var(--48);
+  padding-inline: var(--16);
+}
+
+@media (min-width: 768px) {
+  .pageLayout {
+    padding: var(--128);
+  }
+}

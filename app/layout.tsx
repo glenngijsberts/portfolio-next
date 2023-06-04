@@ -2,6 +2,7 @@ import { Inter } from 'next/font/google'
 import { ReactNode } from 'react'
 import { Metadata } from 'next'
 import '~/styles/global.css'
+import { PageLayout } from '~/components/PageLayout'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -42,7 +43,9 @@ interface Props {
 export default function RootLayout({ children }: Props) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <PageLayout>{children}</PageLayout>
+      </body>
     </html>
   )
 }

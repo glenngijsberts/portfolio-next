@@ -1,23 +1,12 @@
-.container {
+.section {
   display: flex;
   flex-direction: column;
   gap: var(--16);
 }
 
-.container h1 {
-  font-size: var(--48);
-}
-
 @media (min-width: 768px) {
-  .container {
-    padding: var(--48);
+  .section {
     justify-content: center;
-    height: 100vh;
     gap: var(--16);
-  }
-
-  .container h1 {
-    margin-bottom: 0;
-    font-size: var(--64);
   }
 }

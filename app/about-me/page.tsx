@@ -1,13 +1,12 @@
 import { Header } from '~/components/Header'
-import styles from './about-me.module.css'
 import { Section } from '~/components/Section'
 import { Button } from '~/components/Button'
 
 const AboutMe = () => (
-  <main className={styles.pageLayout}>
-    <Header />
+  <>
+    <Header title="About me" />
 
-    <Section title="About me">
+    <Section>
       <p>
         I&apos;m 27 years old and originally from{' '}
         <a href="https://en.wikipedia.org/wiki/The_Hague">The Hague</a>. I&apos;m now living in{' '}
@@ -38,7 +37,7 @@ const AboutMe = () => (
         <Button>Download my resume</Button>
       </a>
     </Section>
-  </main>
+  </>
 )
 
 export default AboutMe

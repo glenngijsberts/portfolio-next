@@ -35,10 +35,10 @@ const Home = async () => {
   })
 
   return (
-    <main className={styles.pageLayout}>
-      <Header />
+    <>
+      <Header title={data?.website?.title || 'Glenn Gijsberts'} />
 
-      <Section title={data?.website?.title || 'Glenn Gijsberts'}>
+      <Section>
         {data?.website?.description && documentToReactComponents(data?.website?.description.json)}
 
         <Link href="/about-me">
@@ -53,7 +53,7 @@ const Home = async () => {
           ))}
         </ul>
       </Section>
-    </main>
+    </>
   )
 }
 

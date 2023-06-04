@@ -1,6 +1,18 @@
+.header {
+  margin-block-end: var(--16);
+}
+
+.image {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.title {
+  font-size: var(--64);
+}
+
 @media (min-width: 768px) {
   .image {
-    height: 100vh;
-    object-fit: cover;
+    width: 264px;
   }
 }
