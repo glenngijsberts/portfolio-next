@@ -1,14 +1,16 @@
 .links {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
   list-style: none;
-  gap: var(--8);
+  gap: var(--32);
   margin-block-start: var(--16);
+  flex-direction: column;
+  font-size: var(--20);
 }
 
 @media (min-width: 768px) {
   .links {
     display: flex;
+    flex-direction: row;
     gap: var(--8);
   }
 }
