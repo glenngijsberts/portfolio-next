@@ -1,6 +1,8 @@
 import { Header } from '~/components/Header'
 import { Section } from '~/components/Section'
 import { Button } from '~/components/Button'
+import Link from 'next/link'
+import styles from './about.module.css'
 
 const AboutMe = () => (
   <>
@@ -37,6 +39,10 @@ const AboutMe = () => (
         <Button>Download my resume</Button>
       </a>
     </Section>
+
+    <footer className={styles.footer}>
+      <Link href="/">&larr; Back to home</Link>
+    </footer>
   </>
 )
 
