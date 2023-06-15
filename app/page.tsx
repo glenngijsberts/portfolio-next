@@ -4,7 +4,7 @@ import { Section } from '~/components/Section'
 import { Button } from '~/components/Button'
 import Link from 'next/link'
 import { getClient } from '~/lib/apolloClient'
-import { WebsiteEntryQueryDocument } from '~/graphql/getWebsiteInfo'
+import { GetPageInfoDocument } from '~/graphql/getPageInfo'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 const links = [
@@ -28,9 +28,9 @@ const links = [
 
 const Home = async () => {
   const { data } = await getClient().query({
-    query: WebsiteEntryQueryDocument,
+    query: GetPageInfoDocument,
     variables: {
-      id: process.env.CF_WEBSITE_ID as string,
+      id: '62C5afb2dP7sdqOEbKLsdS',
     },
   })
 

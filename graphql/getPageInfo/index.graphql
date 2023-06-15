@@ -1,4 +1,4 @@
-query websiteEntryQuery($id: String!) {
+query getPageInfo($id: String!) {
   website(id: $id) {
     sys {
       id
