@@ -7,13 +7,14 @@ import { PageLayout } from '~/components/PageLayout'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Glenn Gijsberts - Front-end developer',
+  title: 'Glenn Gijsberts - Senior Software Developer',
   description:
-    "Graduated as interaction designer, now working as front-end developer on modern and user-friendly websites and apps. Currently I'm working in the growth team of TicketSwap",
+    "Graduated as interaction designer, now working as Senior Software Developer on modern and user-friendly websites and apps. Currently I'm working as iOS Developer at TicketSwap",
   keywords: [
     'Next.js',
     'React',
     'TypeScript',
+    'iOS Developer',
     'Front-end developer',
     'Interaction Designer',
     'Glenn Gijsberts',
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
   authors: [{ name: 'Glenn Gijsberts', url: 'https://glenngijsberts.vercel.app' }],
   openGraph: {
     title: 'Glenn Gijsberts - Portfolio',
-    description: 'Portfolio of Glenn Gijsberts, front-end developer at TicketSwap',
+    description: 'Portfolio of Glenn Gijsberts, iOS Developer at TicketSwap',
     url: 'https://glenngijsberts.vercel.app',
     siteName: 'Glenn Gijsberts - Portfolio',
     images: [
